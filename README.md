@@ -40,7 +40,7 @@ Follow these steps to set up the project:
 
 Make sure to replace 'https://eth-sepolia.g.alchemy.com/v2/ALCHEMY_API_KEY', 'YOUR_DEPLOYER_WALLET_PRIV_KEY', and 'YOUR_ETHERSCAN_API_KEY' with the appropriate values.
 
-5. Set the message slot value to `0x1`0x1 by calling the `sendMessage` function on the source chain.
+5. Set the message slot value to `0x1` by calling the `sendMessage` function on the source chain.
 
 6. Call the RPC `eth_getProof` with the contract address and storage slot using the script/eth_getProof.py script.
 
