@@ -38,13 +38,20 @@ Follow these steps to set up the project:
     ```bash
     forge create --rpc-url 'https://eth-sepolia.g.alchemy.com/v2/ALCHEMY_API_KEY' --private-key 'YOUR_DEPLOYER_WALLET_PRIV_KEY' --etherscan-api-key 'YOUR_ETHERSCAN_API_KEY' --verify 'src/MessageService.sol:MessageService'
 
-Make sure to replace 'https://eth-sepolia.g.alchemy.com/v2/ALCHEMY_API_KEY', 'YOUR_DEPLOYER_WALLET_PRIV_KEY', and 'YOUR_ETHERSCAN_API_KEY' with the appropriate values.
+
+    Make sure to replace 'https://eth-sepolia.g.alchemy.com/v2/ALCHEMY_API_KEY', 'YOUR_DEPLOYER_WALLET_PRIV_KEY', and 'YOUR_ETHERSCAN_API_KEY' with the appropriate values.
+    
+    Pre-deployed address (Goerli): `0xBdE80AC952B3c2B01786992B9C99777a66e443a9`
+
+    Pre-deployed address (Sepolia): `0xBdE80AC952B3c2B01786992B9C99777a66e443a9`
 
 5. Set the message slot value to `0x1` by calling the `sendMessage` function on the source chain.
 
 6. Call the RPC `eth_getProof` with the contract address and storage slot using the script/eth_getProof.py script. (The raw proof bytes are not RLP encoded so make sure you encode it! For example, you can use: https://toolkit.abdk.consulting/ethereum#key-to-address,rlp )
 
 7. Verify on the destination chain's smart contract using the `verifySourceChainMessage` function, providing the proof that the specific message has been sent.
+
+
 
 Please note that this is a basic implementation of a bridge application and is not intended for production use.
 
